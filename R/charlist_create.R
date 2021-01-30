@@ -1,10 +1,10 @@
-#' charlist_creat
+#' charlist_create
 #'
-#' charlist_creat: removes specified column from dataframe or list, empty if 
-#' neither dataframe or list 
+#' Removes specified column from dataframe or list, empty if
+#' neither dataframe or list
 #'
-#' @param column vector 
-#' @return character list 
+#' @param A column vector
+#' @return A character list
 #' @export
 charlist_create <- function(dataframe_column)
 {

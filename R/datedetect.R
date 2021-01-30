@@ -1,7 +1,7 @@
 #' datedetect
-#' determines if column contains dates. These will be removed 
+#' determines if column contains dates. These will be removed
 
-#' @param column vector 
+#' @param dataframe_column A column vector
 #' @return boolean
 #' @export
 datedetect <- function(dataframe_column)

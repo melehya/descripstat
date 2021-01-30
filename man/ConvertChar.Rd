@@ -3,7 +3,7 @@
 \name{ConvertChar}
 \alias{ConvertChar}
 \title{ConvertChar
-This function converts character to numeric string, can handle ordinal varialbes
+Converts character to numeric string, can handle ordinal varialbes
 will convert them to independent binary response variables, which is
 appropriate for descriptive analysis, but for other analyses variables
 should be kept in their ordinal form. Also determines if any columns contain
@@ -22,7 +22,7 @@ a dataframe with all columns containing characters, converted to numeric
 }
 \description{
 ConvertChar
-This function converts character to numeric string, can handle ordinal varialbes
+Converts character to numeric string, can handle ordinal varialbes
 will convert them to independent binary response variables, which is
 appropriate for descriptive analysis, but for other analyses variables
 should be kept in their ordinal form. Also determines if any columns contain

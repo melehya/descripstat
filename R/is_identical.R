@@ -1,7 +1,7 @@
-#' is_identical 
-#' determines if all values in column are identical 
+#' is_identical
+#' determines if all values in column are identical
 
-#' @param column vector 
+#' @param dataframe_column A column vector
 #' @return boolean
 #' @export
 is_identical <- function(dataframe_column)

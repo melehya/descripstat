@@ -1,7 +1,7 @@
 #' statsd1
 
-#' statsd1 computes table of descriptive statistics and table of p-values from pairwise comparisons
-#' group_name is the grouping variable
+#' Computes table of descriptive statistics and table of p-values from pairwise comparisons
+#'
 #' Set fisher allows user to specify the threshold number of observations beneath which fisher's exact test
 #' will be used to compare categorical variables. Above this threshold chi squared will be used.
 #' fxn will determine if continuous variables are normally distributed or not and use t.test or
@@ -9,6 +9,8 @@
 #'
 #' @param dataframe A dataframe
 #' @param set_fisher Set the value beneath which fisher's exact will be used
+#' @param group_name A column variable that specifies groups
+#' @param number_of_groups The number of groups being compared
 #' @return A list of tables, one summarizing descriptive statistics, the other a list of p-values from pairwise testing if number of groups > 2
 #' @export
 

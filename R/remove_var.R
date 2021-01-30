@@ -1,10 +1,11 @@
-#' remove var 
-#' remove_var: removes specified variable from list 
+#' remove var
+#' removes specified variable from list
 
-#' @param dataframe A column vector 
-#' @param var A variable 
-#' @return dataframe 
+#' @param dataframe A column vector
+#' @param var A variable
+#' @return A dataframe with specified column removed
 #' @export
+
 remove_var <- function(dataframe, var)
 {
   ifelse((class(dataframe)=="data.frame"),
@@ -16,7 +17,7 @@ remove_var <- function(dataframe, var)
              ifelse((var!=i),
                     {
                       new.frame <- data.frame(new.frame, dataframe[[i]])
-                      newcolnames <- append(newcolnames, i) 
+                      newcolnames <- append(newcolnames, i)
                       next
                     },
                     {

@@ -2,17 +2,17 @@
 % Please edit documentation in R/charlist_create.R
 \name{charlist_create}
 \alias{charlist_create}
-\title{charlist_creat}
+\title{charlist_create}
 \usage{
 charlist_create(dataframe_column)
 }
 \arguments{
-\item{column}{vector}
+\item{A}{column vector}
 }
 \value{
-character list
+A character list
 }
 \description{
-charlist_creat: removes specified column from dataframe or list, empty if
+Removes specified column from dataframe or list, empty if
 neither dataframe or list
 }

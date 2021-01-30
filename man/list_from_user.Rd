@@ -3,7 +3,7 @@
 \name{list_from_user}
 \alias{list_from_user}
 \title{list_from_user
-function allows user to input names for the column names
+allows user to input names for the column names
 must ensure that there is no text including commented text beneath the final function
 call or will not work
 input is the number of groups being analyzed}
@@ -14,11 +14,11 @@ list_from_user(number_of_groups)
 \item{number}{of groups}
 }
 \value{
-list
+A list of desired column names
 }
 \description{
 list_from_user
-function allows user to input names for the column names
+allows user to input names for the column names
 must ensure that there is no text including commented text beneath the final function
 call or will not work
 input is the number of groups being analyzed

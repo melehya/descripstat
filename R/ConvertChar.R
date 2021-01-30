@@ -1,12 +1,12 @@
 #' ConvertChar
-#' This function converts character to numeric string, can handle ordinal varialbes 
-#' will convert them to independent binary response variables, which is 
-#' appropriate for descriptive analysis, but for other analyses variables 
-#' should be kept in their ordinal form. Also determines if any columns contain 
-#' dates and removes them. Otherwise would turn each individual date into a separate 
-#' categorical variables 
+#' Converts character to numeric string, can handle ordinal varialbes
+#' will convert them to independent binary response variables, which is
+#' appropriate for descriptive analysis, but for other analyses variables
+#' should be kept in their ordinal form. Also determines if any columns contain
+#' dates and removes them. Otherwise would turn each individual date into a separate
+#' categorical variables
 #'
-#' @param dataframe dataframe to be inputted 
+#' @param dataframe dataframe to be inputted
 #' @param group_name variable specifying groups
 #' @return a dataframe with all columns containing characters, converted to numeric
 #' @export
@@ -55,7 +55,7 @@ ConvertChar <- function(dataframe, group_name)
                       d = 1
                       m = 1
                       while(m <= length(charlist))
-                      { 
+                      {
                         newvarlist = list()
                         blanklist = list()
                         for (z in dataframe[[i]])
@@ -77,7 +77,7 @@ ConvertChar <- function(dataframe, group_name)
                         #dataframe <- data.frame(unlist(newvarlist),dataframe)
                         new_frame <- data.frame(unlist(newvarlist),new_frame)
                         colnames(new_frame) <- colname_new
-                        
+
                         m = m + 1
                         e = e + 1
                       }

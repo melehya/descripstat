@@ -2,7 +2,7 @@
 % Please edit documentation in R/flex_tab_addnew.R
 \name{flex_tab_addnew}
 \alias{flex_tab_addnew}
-\title{flex-table to output to .docx
+\title{flex_tab_addnew
 takes table (cattable) and ouputs it is a formatted table
 in word to specified output file "outfile." Output file must be
 format "filename.docx"}
@@ -10,15 +10,15 @@ format "filename.docx"}
 flex_tab_addnew(cattable, outfile)
 }
 \arguments{
-\item{cattable}{table to be converted to flextable}
+\item{cattable}{Table to be converted to flextable}
 
-\item{outfile}{file to export table to}
+\item{outfile}{File to export table to}
 }
 \value{
 flextable
 }
 \description{
-flex-table to output to .docx
+flex_tab_addnew
 takes table (cattable) and ouputs it is a formatted table
 in word to specified output file "outfile." Output file must be
 format "filename.docx"

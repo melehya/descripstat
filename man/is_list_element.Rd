@@ -8,7 +8,9 @@ Determines if a variable is present in a particular list}
 is_list_element(list, var)
 }
 \arguments{
-\item{variable}{searching for}
+\item{list}{A list}
+
+\item{var}{A variable being searched for}
 }
 \value{
 boolean

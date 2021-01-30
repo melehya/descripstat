@@ -8,7 +8,7 @@ determines if all values in column are identical}
 is_identical(dataframe_column)
 }
 \arguments{
-\item{column}{vector}
+\item{dataframe_column}{A column vector}
 }
 \value{
 boolean

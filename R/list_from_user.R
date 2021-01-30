@@ -1,11 +1,11 @@
 #' list_from_user
-#' function allows user to input names for the column names 
-#' must ensure that there is no text including commented text beneath the final function 
-#' call or will not work 
-#' input is the number of groups being analyzed 
+#' allows user to input names for the column names
+#' must ensure that there is no text including commented text beneath the final function
+#' call or will not work
+#' input is the number of groups being analyzed
 
-#' @param number of groups 
-#' @return list 
+#' @param number of groups
+#' @return A list of desired column names
 #' @export
 list_from_user <- function(number_of_groups)
 {

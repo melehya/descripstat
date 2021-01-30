@@ -3,7 +3,7 @@
 \name{remove_var}
 \alias{remove_var}
 \title{remove var
-remove_var: removes specified variable from list}
+removes specified variable from list}
 \usage{
 remove_var(dataframe, var)
 }
@@ -13,9 +13,9 @@ remove_var(dataframe, var)
 \item{var}{A variable}
 }
 \value{
-dataframe
+A dataframe with specified column removed
 }
 \description{
 remove var
-remove_var: removes specified variable from list
+removes specified variable from list
 }

@@ -7,13 +7,13 @@
 is_normal(dataframe_column)
 }
 \arguments{
-\item{column}{vector}
+\item{dataframe_column}{A column vector}
 }
 \value{
 boolean
 }
 \description{
-is_normal takes a continuous variable from a dataframe
+Takes a continuous variable from a dataframe
 and determines if the values are normally distributed
 outputs TRUE if they are, FALSE if not
 }

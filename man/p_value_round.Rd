@@ -12,10 +12,10 @@ returns rounded p value}
 p_value_round(pval)
 }
 \arguments{
-\item{pval}{p-value}
+\item{pval}{A p-value}
 }
 \value{
-rounded p-value
+A rounded p-value
 }
 \description{
 p_value_round
