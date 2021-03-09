@@ -20,7 +20,6 @@ ConvertChar <- function(dataframe, group_name)
     e = 1
     ifelse((class(dataframe[[i]])=="character"),
            {
-             print(i)
              if(datedetect(dataframe[[i]])==TRUE)
              {
               next
