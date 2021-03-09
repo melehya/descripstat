@@ -11,7 +11,7 @@ flex_tab_addnew <- function(cattable, outfile)
 {
   catflex <- flextable::qflextable(cattable)
   catflex<-flextable::autofit(catflex)
-  doc <- read_docx()
+  doc <- officer::read_docx()
   doc <- flextable::body_add_flextable(doc, value = catflex)
   print(doc, target = outfile)
 }
