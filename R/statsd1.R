@@ -73,6 +73,7 @@ statsd1 <- function(dataframe, set_fisher=10, group_name, number_of_groups){
 
   # outer most loop that sequentially steps through each variable in the imported csv
   for (i in colnames(dataframe1)){
+    print(i)
     if((length(na.omit(dataframe1[[i]]))<5))
     {
       next
