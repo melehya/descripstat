@@ -17,14 +17,13 @@ ConvertChar <- function(dataframe, group_name)
   frame_list <- list()
   for (i in colnames(dataframe))
   {
-    
-    e = 1
-    ifelse((class(dataframe[[i]])=="character"),
-           {
-             if(datedetect(dataframe[[i]])==TRUE)
+    if(datedetect(dataframe[[i]])==TRUE)
              {
               next
              }
+    e = 1
+    ifelse((class(dataframe[[i]])=="character"),
+           {
              #colnamelist = colnames(dataframe)
              newvarlist = list()
              charlist = list()
