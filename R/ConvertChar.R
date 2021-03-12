@@ -17,21 +17,19 @@ ConvertChar <- function(dataframe, group_name)
   frame_list <- list()
   for (i in colnames(dataframe))
   {
+    print(i)
+    if(datedetect(dataframe[[i]])==TRUE)
+    {
+      next
+    }
     e = 1
     ifelse((class(dataframe[[i]])=="character"),
            {
-             if(length(dataframe[[i]]!=0))
-                {
-                  if(datedetect(dataframe[[i]])==TRUE)
-                  {
-                    next
-                  }
-                }
              #colnamelist = colnames(dataframe)
              newvarlist = list()
              charlist = list()
              numlist = list()
-             start=1
+             
              count=0
              for(j in dataframe[[i]])
              {
@@ -93,13 +91,20 @@ ConvertChar <- function(dataframe, group_name)
                       colnames(new_frame)<-colname_new
                     },
                     {
+                      start=1
                       while(start <= length(dataframe[[i]]))
                       {
+                        #print(start)
                         charlistnum=1
+                        if(dataframe[[i]][[start]]=="")
+                        {
+                          start = start+1
+                        }
                         while(charlistnum<=length(charlist))
                         {
                           ifelse((dataframe[[i]][[start]]==charlist[[charlistnum]]),
                                  {
+                                  
                                    dataframe[[i]][[start]] <- numlist[[charlistnum]]
                                    start = start+1
                                    break
@@ -108,7 +113,7 @@ ConvertChar <- function(dataframe, group_name)
                                    charlistnum = charlistnum + 1
                                  })
                         }
-                        next
+                        #next
                       }
                       next
                     })
