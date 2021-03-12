@@ -14,7 +14,7 @@
 #' @return A list of tables, one summarizing descriptive statistics, the other a list of p-values from pairwise testing if number of groups > 2
 #' @export
 
-statsd1 <- function(dataframe, set_fisher=10, group_name, number_of_groups){
+statsd2 <- function(dataframe, set_fisher=10, group_name, number_of_groups){
   ifelse((number_of_groups>1),
          {
            categorical_table <- data.frame(matrix(nrow=1,ncol=(number_of_groups+2)))
@@ -73,7 +73,6 @@ statsd1 <- function(dataframe, set_fisher=10, group_name, number_of_groups){
 
   # outer most loop that sequentially steps through each variable in the imported csv
   for (i in colnames(dataframe1)){
-    print(i)
     if((length(na.omit(dataframe1[[i]]))<5))
     {
       next
@@ -721,7 +720,7 @@ statsd1 <- function(dataframe, set_fisher=10, group_name, number_of_groups){
     h = 1
     while(h <= length(colnames(ord_frame)))
     {
-      ifelse(((paste(ord_frame[[j]][[1]]))=='NA'),
+      ifelse(((paste(ord_frame[[j]][[1]]))=='NA' & number_of_groups>1),
              {
                h = h + 1
              },
@@ -741,7 +740,7 @@ statsd1 <- function(dataframe, set_fisher=10, group_name, number_of_groups){
                h = h + 1
              })
     }
-    ifelse(((paste(ord_frame[[j]][[1]]))=='NA'),
+    ifelse(((paste(ord_frame[[j]][[1]]))=='NA' & number_of_groups>1),
            {
 
              ifelse((fish==0),
@@ -799,6 +798,10 @@ statsd1 <- function(dataframe, set_fisher=10, group_name, number_of_groups){
            })
   }
   categorical_table <- categorical_table[-1,]
+  if(number_of_groups==1)
+  {
+    categorical_table <- categorical_table[,-3]
+  }
   my_table_list = list()
   my_table_list = list(categorical_table, pairtable)
 }
