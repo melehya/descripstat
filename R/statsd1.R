@@ -14,7 +14,7 @@
 #' @return A list of tables, one summarizing descriptive statistics, the other a list of p-values from pairwise testing if number of groups > 2
 #' @export
 
-statsd2 <- function(dataframe, set_fisher=10, group_name, number_of_groups){
+statsd1 <- function(dataframe, set_fisher=10, group_name, number_of_groups){
   ifelse((number_of_groups>1),
          {
            categorical_table <- data.frame(matrix(nrow=1,ncol=(number_of_groups+2)))
